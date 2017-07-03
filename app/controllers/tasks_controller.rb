@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  
+
   def new
     @list = List.find(params[:list_id])
     @task = @list.tasks.new
@@ -37,7 +37,6 @@ class TasksController < ApplicationController
     @task.destroy
     redirect_to list_path(@task.list)
   end
-
 
   private
     def task_params
